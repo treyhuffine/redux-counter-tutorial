@@ -1,9 +1,11 @@
 export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
 export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
 
-export function increment() {
+export function increment(increaseAmount = 1) {
+  console.log('increase amount', increaseAmount);
   return {
-    type: INCREMENT_COUNTER
+    type: INCREMENT_COUNTER,
+    increaseAmount
   };
 }
 

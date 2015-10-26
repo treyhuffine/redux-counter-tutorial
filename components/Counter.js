@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import NumberButton from './NumberButton';
 
 class Counter extends Component {
   render() {
@@ -7,7 +8,11 @@ class Counter extends Component {
       <p>
         Clicked: {counter} times
         {' '}
-        <button onClick={increment}>+</button>
+        <NumberButton onLocalClick={increment} buttonVal={1} />
+        {' '}
+        <NumberButton onLocalClick={increment} buttonVal={5} />
+        {' '}
+        <NumberButton onLocalClick={increment} buttonVal={10} />
         {' '}
         <button onClick={decrement}>-</button>
         {' '}
